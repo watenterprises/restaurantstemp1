@@ -52,7 +52,7 @@ const Home = () => {
                 <div className="container">
                     <div className="about-content">
                         <div className="about-image">
-                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chef cooking" />
+                            <img src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chef cooking" />
                         </div>
                         <div className="about-text">
                             <h2 className="section-title" style={{ left: 0, transform: 'none' }}>About Us</h2>

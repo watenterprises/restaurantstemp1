@@ -16,21 +16,20 @@ const Navbar = () => {
                     LuxeDining
                 </a>
 
-                <div className="mobile-menu-btn" onClick={toggleMenu}>
-                    {isMenuOpen ? '✕' : '☰'}
-                </div>
-
                 <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
                     <li><a href="#home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</a></li>
                     <li><a href="#menu" className="nav-link" onClick={() => setIsMenuOpen(false)}>Menu</a></li>
                     <li><a href="#gallery" className="nav-link" onClick={() => setIsMenuOpen(false)}>Gallery</a></li>
                     <li><a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</a></li>
                     <li><a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
-                    {/* Mobile only CTA if needed */}
                 </ul>
 
                 <div className="navbar-actions">
                     <Button size="sm">Book a Table</Button>
+                </div>
+
+                <div className="mobile-menu-btn" onClick={toggleMenu}>
+                    {isMenuOpen ? '✕' : '☰'}
                 </div>
             </div>
         </nav>
