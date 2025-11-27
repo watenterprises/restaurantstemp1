@@ -1,0 +1,68 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border-radius: 4px;
+    /* Slight rounding for premium feel, or 0 for sharp */
+    transition: var(--transition-base);
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Sizes */
+.btn-sm {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--text-xs);
+}
+
+.btn-md {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--text-sm);
+}
+
+.btn-lg {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--text-base);
+}
+
+/* Variants */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    /* Dark text on gold */
+    border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.btn-text {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-text:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}

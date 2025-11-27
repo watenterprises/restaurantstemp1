@@ -1,0 +1,109 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.95);
+    /* Dark semi-transparent */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: var(--transition-base);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.navbar-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.navbar-links {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition-base);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.mobile-menu-btn {
+    display: none;
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar-links {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--color-secondary);
+        flex-direction: column;
+        padding: var(--spacing-xl);
+        gap: var(--spacing-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-base);
+        z-index: 999;
+    }
+
+    .navbar-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .navbar-actions .btn {
+        display: none;
+        /* Hide CTA on mobile header, maybe show in menu */
+    }
+
+    /* Show CTA in mobile menu if needed, or keep it hidden */
+}
